@@ -1,31 +1,14 @@
-class Point:
-    def __init__(self,x_,y_):
-        self.x = x_
-        self.y = y_
-
-    def afficherLesPoints(self): 
-        return print("Coordonnées =\n x : {} \n y : {}".format(self.x,self.y))
-    
-    def afficherX(self) : 
-        return print("Coordonnées = x : {}".format(self.x))
-    
-    def afficherY(self) : 
-        return print("Coordonnées = y : {}".format(self.y))
-    
-    def changerX(self,newX):
-        self.x = newX
-        return print("Nouvelle valeur de X : {}".format(self.x))
-    
-    def changerY(self,newY):
-        self.y = newY
-        return print("Nouvelle valeur de Y : {}".format(self.y))
-
-coord = Point(50,50)
-
-coord.afficherLesPoints()
-coord.afficherX()
-coord.afficherY()
-coord.changerX(42)
-coord.changerY(42)
-
-coord.afficherLesPoints()
+class Animal: 
+    def __init__(self):
+        self.age = 0
+        self.prenom = ""
+    def viellir(self): 
+        self.age +=1
+        return print("âge de l'animal {}".format(self.age))
+    def nommer(self,prenom_):
+        self.prenom = prenom_
+        return print("L'animal s'appelle désormais {}".format(self.prenom))
+animal = Animal()
+print(animal.age)
+animal.viellir()
+animal.nommer("Ace")

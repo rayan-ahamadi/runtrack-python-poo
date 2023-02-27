@@ -1,10 +1,15 @@
-class Operation: 
-    def __init__(self):
-        self.nombre1 = 1
-        self.nombre2 = 2 
+class Personne: 
+    def __init__(self,nom_,prenom_):
+        self.nom = nom_
+        self.prenom = prenom_
 
-    def addition(self):
-        return print(self.nombre2 + self.nombre1)
+    def SePresenter(self): 
+        return print("Je suis {} {}".format(self.prenom,self.nom))
     
-objet = Operation()
-objet.addition()
+bruce = Personne("Wayne","Bruce")
+tony = Personne("Stark", "Tony")
+parker = Personne("Parker", "Peter")
+
+bruce.SePresenter()
+tony.SePresenter()
+parker.SePresenter()
